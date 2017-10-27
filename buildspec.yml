@@ -1,0 +1,22 @@
+--- 
+artifacts: 
+  discard-paths: true
+  files: 
+    - target/*.*
+phases: 
+  build: 
+    commands: 
+      - "echo Entered the build phase..."
+      - "echo Build started on `date`"
+      - "mvn install"
+  install: 
+    commands: 
+      - "echo Entered the install phase..."
+  post_build: 
+    commands: 
+      - "echo Entered the post_build phase..."
+      - "echo Build completed on `date`"
+  pre_build: 
+    commands: 
+      - "echo Entered the pre_build phase..."
+version: 0.2
